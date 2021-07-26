@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Edit</title>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img src="assets/images/faces/face1.jpg" alt="profile">
+                  <span class="login-status online"></span>
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2" id="lblAdminName"></span>
+                  <span class="text-secondary text-small" id="lblAdminEmployeeId"></span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Dashboard.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="EditAdminPage.html">
+                <span class="menu-title">Edit My Page</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Customers.html">
+                <span class="menu-title">All Users</span>
+                <i class="mdi mdi-table-large menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Login.html">
+                <span class="menu-title">Logout</span>
+                <i class="mdi mdi-login menu-icon"></i>
+              </a>
+            </li>
+
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Edit your detail ... </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+<!--                  <li class="breadcrumb-item"><a href="#"></a></li>-->
+<!--                  <li class="breadcrumb-item active" aria-current="page"></li>-->
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="EditMyPageAdminUserName">Username</label>
+                        <input type="text" class="form-control" id="EditMyPageAdminUserName" placeholder="chathumal jayasingha">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminFullName">Full Name</label>
+                        <input type="text" class="form-control" id="EditMyPageAdminFullName" placeholder="_Chathumal_123">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminNIC">NIC</label>
+                        <input type="text" class="form-control" id="EditMyPageAdminNIC" placeholder="399923320V">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminMobile">Mobile</label>
+                        <input type="text" class="form-control" id="EditMyPageAdminMobile" placeholder="07843423234">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminEmployeeId">Employee Id</label>
+                        <input type="text" class="form-control" id="EditMyPageAdminEmployeeId" placeholder="202042">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminEmail">Email address</label>
+                        <input type="email" class="form-control" id="EditMyPageAdminEmail" placeholder="chathumal@gmail.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="EditMyPageAdminPasswordTwo">Confirm Password</label>
+                        <input type="password" class="form-control" id="EditMyPageAdminPasswordTwo" placeholder="Password">
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input"> Remember me </label>
+                      </div>
+                      <button type="button" id="EditMyPageBtnUpdate" class="btn btn-gradient-primary mr-2">UPDATE</button>
+                      <button type="button"  id="EditMyPageBtnRemove" class="btn btn-gradient-danger mr-2">REMOVE</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©  2020/2021</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://rwadproject.000webhostapp.com" target="_blank">My WebSite </a> </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/file-upload.js"></script>
+    <script>
+
+      $(document).ready(function(){
+
+        var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+        var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
+        function mouseUp() {
+          audio.load();
+          audio.play();
+        }
+        function mouseDown() {
+          audio2.load();
+          audio2.play();
+        }
+
+
+        let parse = JSON.parse(sessionStorage.getItem("jsArray"));
+        let email = parse[0];
+        let role = parse[1];
+        let password = parse[2];
+
+        $.ajax({
+          method: "get",
+          url:'http://localhost:8080/user/findUser/'+email,
+          async:true,
+          success:function(data){
+
+            const array = Object.values(data)[2];
+            $("#lblAdminName").html("Name : "+Object.values(array)[1]);
+            $("#lblAdminEmployeeId").html("Employee Id: "+Object.values(array)[8]);
+            $("#EditMyPageAdminEmployeeId").val(Object.values(array)[8]);
+            $("#EditMyPageAdminNIC").val(Object.values(array)[7]);
+            $("#EditMyPageAdminFullName").val(Object.values(array)[1]);
+            $("#EditMyPageAdminEmail").val(Object.values(array)[0]);
+            $("#EditMyPageAdminUserName").val(Object.values(array)[3]);
+            $("#EditMyPageAdminPasswordTwo").val(Object.values(array)[4]);
+            $("#EditMyPageAdminMobile").val(Object.values(array)[2]);
+
+          },error:function (data) {
+            alert(data)
+          }
+        })
+
+      });
+
+      $("#EditMyPageBtnUpdate").click(function () {
+        let email = $("#EditMyPageAdminEmail").val();
+        let userName = $("#EditMyPageAdminUserName").val();
+        let fullName = $("#EditMyPageAdminFullName").val();
+        let userFullName = $("#EditMyPageAdminFullName").val();
+        let mobile = $("#EditMyPageAdminMobile").val();
+        let userPassword = $("#EditMyPageAdminPasswordTwo").val();
+        let nic = $("#EditMyPageAdminNIC").val();
+        let employeeNumber = $("#EditMyPageAdminEmployeeId").val();
+
+        if (userFullName===""){
+            alert("Please enter your full name")
+            return;
+          }
+          if (mobile===""){
+            alert("Please enter mobile ")
+            return;
+          }
+          if (userPassword===""){
+            alert("Please enter Password")
+            return;
+          }
+        $.ajax({
+          url:'http://localhost:8080/user/updateUser',
+          method:'put',
+          async:true,
+          contentType: 'application/json',
+          data: JSON.stringify({
+            email:email,
+            name:fullName,
+            mobile:mobile,
+            userName:userName,
+            password:userPassword,
+            address:null,
+            type:"admin",
+            nic:nic,
+            employeeNumber:employeeNumber
+          }),
+          success:function(data){
+            alert("Your Detail Updated Sucessfully");
+            location.reload();
+          },error:function (data) {
+            alert("Error in user update");
+          }
+        })
+      })
+
+
+      $("#EditMyPageBtnRemove").click(function () {
+        let email = $("#EditMyPageAdminEmail").val();
+        $.ajax({
+          url: 'http://localhost:8080/user?email='+email,
+          method: 'delete',
+          async: true,
+          success: function (data, textState, xhr) {
+            console.log(data);
+            window.location.href="Login.html";
+          },error:function (data) {
+            alert("Remove Error")
+          }
+        });
+
+
+      });
+
+    </script>
+
+  </body>
+</html>

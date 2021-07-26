@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="container-scroller">
+
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img src="assets/images/faces/face1.jpg" alt="profile">
+                  <span class="login-status online"></span>
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2" id="lblAdminName"></span>
+                  <span class="text-secondary text-small" id="lblAdminEmployeeId"></span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Dashboard.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="EditAdminPage.html">
+                <span class="menu-title">Edit My Page</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Customers.html">
+                <span class="menu-title">All Users</span>
+                <i class="mdi mdi-table-large menu-icon"></i>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="Login.html">
+                <span class="menu-title">Logout</span>
+                <i class="mdi mdi-login menu-icon"></i>
+              </a>
+            </li>
+
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> Dashboard
+              </h3>
+              <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Customers <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="lblCustomerCountDashboard"></h2>
+<!--                    <h6 class="card-text">Increased by 60%</h6>-->
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">All Administrators <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="lblAdminCountDashboard"></h2>
+<!--                    <h6 class="card-text">Decreased by 10%</h6>-->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+
+                    <div class="d-flex">
+
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-6 pr-1">
+                        <img src="assets/images/dashboard/img_1.jpg" class="mb-2 mw-100 w-100 rounded" alt="image">
+                        <img src="assets/images/dashboard/img_4.jpg" class="mw-100 w-100 rounded" alt="image">
+                      </div>
+                      <div class="col-6 pl-1">
+                        <img src="assets/images/dashboard/img_2.jpg" class="mb-2 mw-100 w-100 rounded" alt="image">
+                        <img src="assets/images/dashboard/img_3.jpg" class="mw-100 w-100 rounded" alt="image">
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©  2020/2021</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://rwadproject.000webhostapp.com" target="_blank">My WebSite </a> </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script>
+      $(document).ready(function () {
+        let parse = JSON.parse(sessionStorage.getItem("jsArray"));
+        let email = parse[0];
+        let role = parse[1];
+        let password = parse[2];
+
+        $.ajax({
+          method: "get",
+          url:'http://localhost:8080/user/findUser/'+email,
+          async:true,
+          success:function(data){
+            const array = Object.values(data)[2];
+            $("#lblAdminName").html("Name : "+Object.values(array)[1]);
+            $("#lblAdminEmployeeId").html("Employee Id: "+Object.values(array)[8]);
+          },error:function (data) {
+            alert(data)
+          }
+        });
+
+        $.ajax({
+          method: "get",
+          url:'http://localhost:8080/user/getAllUser',
+          async:true,
+          success:function(data){
+            const allUsers = Object.values(data)[2];
+            let customersCount=0;
+            let adminCount=0;
+
+
+            for (let i = 0; i < allUsers.length; i++) {
+              if(allUsers[i].type==="customer"){
+                customersCount+=1;
+              }
+              if(allUsers[i].type==="admin"){
+                adminCount+=1;
+              }
+
+            }
+            console.log(customersCount);
+            console.log(adminCount);
+            $("#lblAdminCountDashboard").html(adminCount);
+            $("#lblCustomerCountDashboard").html(customersCount);
+          },error:function (data) {
+            alert(data)
+          }
+        });
+
+
+      })
+
+    </script>
+  </body>
+</html>

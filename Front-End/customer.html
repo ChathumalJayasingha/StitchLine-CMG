@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Edit</title>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+
+                <li class="nav-item nav-profile">
+                    <a href="#" class="nav-link">
+                        <div class="nav-profile-image">
+                            <img src="assets/images/faces/face1.jpg" alt="profile">
+                            <span class="login-status online"></span>
+                        </div>
+                        <div class="nav-profile-text d-flex flex-column">
+                            <span class="font-weight-bold mb-2" id="lblAdminName"></span>
+                            <span class="text-secondary text-small" id="lblAdminEmployeeId"></span>
+                        </div>
+                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html">
+                        <span class="menu-title">Logout</span>
+                        <i class="mdi mdi-login menu-icon"></i>
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title"> Edit your detail ... </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <!--                  <li class="breadcrumb-item"><a href="#"></a></li>-->
+                            <!--                  <li class="breadcrumb-item active" aria-current="page"></li>-->
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 stretch-card grid-margin">
+                        <div class="card bg-gradient-danger card-img-holder text-white">
+                            <div class="card-body">
+                                <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                                <h4 class="font-weight-normal mb-3">Your Name <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                                </h4>
+                                <h2 class="mb-5" id="lblCustomerPageCustomerName"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 stretch-card grid-margin">
+                        <div class="card bg-gradient-info card-img-holder text-white">
+                            <div class="card-body">
+                                <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                                <h4 class="font-weight-normal mb-3">Your Email <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                                </h4>
+                                <h2 class="mb-5" id="lblCustomerPageCustomerEmail"></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 stretch-card grid-margin">
+                        <div class="card bg-gradient-success card-img-holder text-white">
+                            <div class="card-body">
+                                <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                                <h4 class="font-weight-normal mb-3">Your Address <i class="mdi mdi-access-point-network mdi-24px float-right"></i>
+                                </h4>
+                                <h2 class="mb-5" id="lblCustomerPageCustomerAddress"></h2>
+                                <!--                    <h6 class="card-text">Decreased by 10%</h6>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="forms-sample">
+                                    <div class="form-group">
+                                        <label for="CustomerPageUserName">Username</label>
+                                        <input type="text" class="form-control" id="CustomerPageUserName" placeholder="chathumal jayasingha">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CustomerPageFullName">Full Name</label>
+                                        <input type="text" class="form-control" id="CustomerPageFullName" placeholder="_Chathumal_123">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CustomerPageMobile">Mobile</label>
+                                        <input type="text" class="form-control" id="CustomerPageMobile" placeholder="07843423234">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CustomerPageEmail">Email address</label>
+                                        <input type="email" class="form-control" id="CustomerPageEmail" placeholder="chathumal@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CustomerPageAddress">Address</label>
+                                        <input type="email" class="form-control" id="CustomerPageAddress" placeholder="Horana">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CustomerPagePassword">Password</label>
+                                        <input type="password" class="form-control" id="CustomerPagePassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-check form-check-flat form-check-primary">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input"> Remember me </label>
+                                    </div>
+                                    <button type="button" id="CustomerPageBtnUpdate" class="btn btn-gradient-primary mr-2">UPDATE</button>
+                                    <button type="button"  id="CustomerPageBtnRemove" class="btn btn-gradient-danger mr-2">REMOVE</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid clearfix">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©  2020/2021</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://rwadproject.000webhostapp.com" target="_blank">My WebSite </a> </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="assets/js/off-canvas.js"></script>
+<script src="assets/js/hoverable-collapse.js"></script>
+<script src="assets/js/misc.js"></script>
+<script src="assets/js/file-upload.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+        var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
+        function mouseUp() {
+            audio.load();
+            audio.play();
+        }
+        function mouseDown() {
+            audio2.load();
+            audio2.play();
+        }
+
+
+        let parse = JSON.parse(sessionStorage.getItem("jsArray"));
+        let email = parse[0];
+        let role = parse[1];
+        let password = parse[2];
+
+        $.ajax({
+            method: "get",
+            url:'http://localhost:8080/user/findUser/'+email,
+            async:true,
+            success:function(data){
+                const array = Object.values(data)[2];
+                $("#lblAdminName").html("Name : "+Object.values(array)[1]);
+                $("#lblAdminEmployeeId").html("Email: "+Object.values(array)[0]);
+                $("#CustomerPageFullName").val(Object.values(array)[1]);
+                $("#CustomerPageEmail").val(Object.values(array)[0]);
+                $("#CustomerPageUserName").val(Object.values(array)[3]);
+                $("#CustomerPagePassword").val(Object.values(array)[4]);
+                $("#CustomerPageMobile").val(Object.values(array)[2]);
+                $("#CustomerPageAddress").val(Object.values(array)[5]);
+                $("#lblCustomerPageCustomerName").html(Object.values(array)[1]);
+                $("#lblCustomerPageCustomerEmail").html(Object.values(array)[0]);
+                $("#lblCustomerPageCustomerAddress").html(Object.values(array)[5]);
+
+
+
+            },error:function (data) {
+                alert(data)
+            }
+        })
+
+    });
+
+    $("#CustomerPageBtnUpdate").click(function () {
+        let email = $("#CustomerPageEmail").val();
+        let userName = $("#CustomerPageUserName").val();
+        let fullName = $("#CustomerPageFullName").val();
+        let mobile = $("#CustomerPageMobile").val();
+        let userPassword = $("#CustomerPagePassword").val();
+        let address = $("#CustomerPageAddress").val();
+
+        if (email===""){
+            alert("Please enter your  email")
+            return;
+        }
+        if (userName===""){
+            alert("Please enter username ")
+            return;
+        }
+        if (fullName===""){
+            alert("Please enter full name")
+            return;
+        }
+        if (mobile===""){
+            alert("Please enter mobile")
+            return;
+        }
+        if (fullName===""){
+            alert("Please enter password")
+            return;
+        }
+        if (address===""){
+            alert("Please enter address");
+            return;
+        }
+        $.ajax({
+            url:'http://localhost:8080/user/updateUser',
+            method:'put',
+            async:true,
+            contentType: 'application/json',
+            data: JSON.stringify({
+                email:email,
+                name:fullName,
+                mobile:mobile,
+                userName:userName,
+                password:userPassword,
+                address:address,
+                type:"customer",
+                nic:null,
+                employeeNumber:null
+            }),
+            success:function(data){
+                alert("Your Detail Updated Sucessfully");
+                location.reload();
+            },error:function (data) {
+                alert("Error in user update");
+            }
+        })
+    })
+
+
+    $("#CustomerPageBtnRemove").click(function () {
+        let email = $("#CustomerPageEmail").val();
+        $.ajax({
+            url: 'http://localhost:8080/user?email='+email,
+            method: 'delete',
+            async: true,
+            success: function (data, textState, xhr) {
+                console.log(data);
+                window.location.href="Login.html";
+            },error:function (data) {
+                alert("Remove Error")
+            }
+        });
+
+
+    });
+
+</script>
+
+</body>
+</html>

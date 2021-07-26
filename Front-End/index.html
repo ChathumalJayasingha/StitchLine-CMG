@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	</head>
+	<body class="img js-fullheight h-auto" style="background-image: url(images/bg.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Stitch Line</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 id="lblMoveToLogInPage" class="mb-4 text-center">Have an account?</h3>
+		      	<form  class="signin-form">
+					<div class="form-group d-md-flex">
+						<div class="w-50">
+							<label id="lblCheckByUserType" class="checkbox-wrap checkbox-primary center">Customer SignUp
+								<input type="checkbox" id="checkBoxUserType" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<div class="form-group ">
+						<input type="text" id="txtUserType" class="form-control" placeholder="UserType" required>
+					</div>
+		      		<div class="form-group ">
+		      			<input type="text" id="txtUserName" class="form-control" placeholder="Username _Ronaldo123" required>
+		      		</div>
+					<div class="form-group">
+						<input type="text" id="txtUserFullName" class="form-control" placeholder="User full Name: Cristiano Ronaldo dos Santos Aveiro" required>
+					</div>
+					<div class="form-group">
+						<input type="text" id="txtUserAddress" class="form-control" placeholder="Address" required>
+					</div>
+					<div class="form-group">
+						<input type="email" id="txtUserEmail" class="form-control" placeholder="E-mail" required>
+					</div>
+					<div class="form-group">
+						<input type="number" id="txtUserMobile" class="form-control" placeholder="Contact" required>
+					</div>
+					<div class="form-group">
+						<input type="text" id="txtUserEmployeeNumber" class="form-control" placeholder="Employee Number" required>
+					</div>
+					<div class="form-group">
+						<input type="text" id="txtUserNIC" class="form-control" placeholder="NIC Number" required>
+					</div>
+	            <div class="form-group">
+	              <input id="password-field"  type="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<button type="submit" id="btnSignUp" class="form-control btn btn-primary submit px-3">Sign In</button>
+	            </div>
+<!--	            <div class="form-group d-md-flex">-->
+<!--	            	<div class="w-50">-->
+<!--		            	<label class="checkbox-wrap checkbox-primary">Remember Me-->
+<!--									  <input type="checkbox" checked>-->
+<!--									  <span class="checkmark"></span>-->
+<!--									</label>-->
+<!--								</div>-->
+<!--								<div class="w-50 text-md-right">-->
+<!--									<a href="#" style="color: #fff">Forgot Password</a>-->
+<!--								</div>-->
+<!--	            </div>-->
+	          </form>
+						<p class="w-100 text-center">&mdash; INFORMATION &mdash;</p>
+						<div class="social d-flex text-center ">
+							<a  href="https://www.cmg.lk" class=" px-2 py-2 mr-md-1 rounded "><span class="ion-logo-facebook mr-2"></span> Capital Maharaja</a>
+							<a href="https://www.cmg.lk/technology" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> TECHNOLOGY</a>
+						</div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+			var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
+			function mouseUpUp() {
+				audio.load();
+				audio.play();
+			}
+			function mouseDownDown() {
+				audio2.load();
+				audio2.play();
+			}
+
+
+
+			$("#txtUserEmployeeNumber").css('display', 'none');
+			$("#txtUserType").css('display', 'none');
+			$("#txtUserType").val("customer")
+
+			$("#lblMoveToLogInPage").click(function () {
+				window.location="Login.html";
+			});
+			$("#lblMoveToLogInPage").mouseup(function () {
+				mouseUpUp();
+			});
+			$("#lblMoveToLogInPage").mousedown(function () {
+				mouseDownDown();
+			});
+
+			$("#txtUserNIC").css('display', 'none')
+			$('#checkBoxUserType').click(function(){
+				if($(this).is(":checked")){
+					alert("I am Customer");
+					$("#lblCheckByUserType").html("I am Customer");
+
+				}
+				if(!$(this).is(":checked")){
+					alert("I am administrator");
+					$("#lblCheckByUserType").html("I am administrator");
+					$("#txtUserEmployeeNumber").css('display', 'inline');
+					$("#txtUserAddress").css('display', 'none');
+					$("#txtUserNIC").css('display', 'inline');
+					$("#txtUserType").val("admin")
+
+				}
+			});
+		});
+
+		$("#btnSignUp").click(function () {
+
+			let type = $("#txtUserType").val();
+			let userName = $("#txtUserName").val();
+			let userFullName = $("#txtUserFullName").val();
+			let address = $("#txtUserAddress").val();
+			let mobile = $("#txtUserMobile").val();
+			let email = $("#txtUserEmail").val();
+			let userPassword = $("#password-field").val();
+			let nic = $("#txtUserNIC").val();
+			let employeeNumber = $("#txtUserEmployeeNumber").val();
+
+			if(type==="customer"){
+				if (userName===""){
+					alert("Please enter userName")
+					return;
+				}
+				if (userFullName===""){
+					alert("Please enter your name")
+					return;
+				}
+				if (address===""){
+					alert("Please enter address")
+					return;
+				}
+				if (mobile===""){
+					alert("Please enter mobile")
+					return;
+				}
+				if (email===""){
+					alert("Please enter email")
+					return;
+				}
+				if (userPassword===""){
+					alert("Please enter Password")
+					return;
+				}
+
+				$.ajax({
+					url:'http://localhost:8080/user/saveUser',
+					method:'POST',
+					async:true,
+					contentType: 'application/json',
+					data: JSON.stringify({
+						email:email,
+						name:userFullName,
+						mobile:mobile,
+						userName:userName,
+						password:userPassword,
+						address:address,
+						type:type,
+						nic:null,
+						employeeNumber:null
+					}),
+					success:function(data){
+						alert("Success");
+						console.log(data);
+						let jsarray = [email,type,userPassword];
+						sessionStorage.setItem("jsArray", JSON.stringify(jsarray));
+						window.location.href="customer.html"
+					},error:function (data) {
+						alert(data)
+					}
+				})
+
+			}
+			else{
+				if (userName===""){
+					alert("Please enter userName")
+					return;
+				}
+				if (userFullName===""){
+					alert("Please enter your name")
+					return;
+				}
+				if (mobile===""){
+					alert("Please enter moblie")
+					return;
+				}
+				if (email===""){
+					alert("Please enter email")
+					return;
+				}
+				if (userPassword===""){
+					alert("Please enter Password")
+					return;
+				}
+				if (employeeNumber===""){
+					alert("Please enter Employee Number")
+					return;
+				}if (nic===""){
+					alert("Please enter NIC")
+					return;
+				}
+				$.ajax({
+					url:'http://localhost:8080/user/saveUser',
+					method:'POST',
+					async:true,
+					contentType: 'application/json',
+					data: JSON.stringify({
+						email:email,
+						name:userFullName,
+						mobile:mobile,
+						userName:userName,
+						password:userPassword,
+						address:null,
+						type:type,
+						nic:nic,
+						employeeNumber:employeeNumber
+					}),
+					success:function(data){
+						console.log(Object.values(data)[0]);
+						alert("Sucessfully");
+						console.log("Save success");
+							let jsarray = [email,type,userPassword];
+							sessionStorage.setItem("jsArray", JSON.stringify(jsarray));
+							window.location.href="Dashboard.html"
+					},error:function (data) {
+						alert(data);
+					}
+				})
+			}
+
+		})
+
+	</script>
+
+	</body>
+</html>
+
